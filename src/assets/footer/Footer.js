@@ -18,7 +18,7 @@ const FooterContainer = styled.footer`
 function Footer() {
   return (
     <FooterContainer>
-      <p>&copy; {new Date().getFullYear()} LucasYohan. Todos os direitos reservados.</p>
+      <p>&copy; {new Date().getFullYear()} NeoApp. Todos os direitos reservados.</p>
     </FooterContainer>
   );
 }
