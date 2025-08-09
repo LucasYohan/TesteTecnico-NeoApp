@@ -64,7 +64,6 @@ const SideMenu = styled.div`
   z-index: 1000;
 `;
 
-
 const CloseBtn = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -108,8 +107,17 @@ const StyledLink = styled(Link)`
 
 const categorias = [
   {
+    nome: 'Páginas',
+    links: [
+      { to: '/Home', label: 'Página Inicial' },
+      { to: '/Carrinho', label: 'Carrinho' },
+      { to: '/Conta', label: 'Conta' },
+    ]
+  },
+  {
     nome: 'HQs',
     links: [
+      { to: '/HQs', label: 'Todas' },
       { to: '/HQs/Homem-Aranha', label: 'Homem-Aranha' },
       { to: '/HQs/Venom', label: 'Venom' },
       { to: '/HQs/Homem-de-Ferro', label: 'Homem-de-Ferro' },
@@ -138,10 +146,10 @@ function Header() {
         </Logo>
 
         <Icons>
-          <IconLink to="/carrinho">
+          <IconLink to="/Carrinho">
             <FiShoppingBag size={22} />
           </IconLink>
-          <IconLink to="/conta">
+          <IconLink to="/Conta">
             <FiUser size={22} />
           </IconLink>
         </Icons>
