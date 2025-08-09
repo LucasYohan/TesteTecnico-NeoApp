@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Footer from "./assets/footer/Footer"
 import Header from './assets/header/Header';
 import Home from "./components/home/Home"
+import Hqs from './components/hqs/Hqs';
+import Shopping_cart from "./components/shopping_cart/Shopping_cart"
+import User from './components/user/User';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
 
           <Route path="/" element={<Navigate to="/Home" />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/HQs" element={<Hqs />} />
+          <Route path="/Carrinho" element={<Shopping_cart />} />
+          <Route path="/Conta" element={<User />} />
 
         </Routes>
       </main>
