@@ -4,15 +4,18 @@ body,
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #ffffff;
-    height: 100%;
+    min-height: 100vh;
+    /* ocupa a altura inteira */
     display: flex;
     flex-direction: column;
+    /* empilha header, main e footer */
+
     background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    background-attachment: fixed;
+
     background-color: rgba(255, 255, 255, 0.4);
     background-blend-mode: lighten;
 }
@@ -53,8 +56,8 @@ textarea {
 }
 
 main {
-    padding: 16px;
     flex: 1;
+    padding: 16px;
 }
 
 h1,

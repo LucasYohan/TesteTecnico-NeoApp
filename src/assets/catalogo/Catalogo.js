@@ -77,7 +77,10 @@ function Catalogo() {
         <div><ImageWrapper><CatalogoImage src="/images/banner1.jpg" alt="Madrinhas de Rose" /></ImageWrapper></div>
         <div><ImageWrapper><CatalogoImage src="/images/banner2.jpg" alt="Madrinhas de Fúcsia" /></ImageWrapper></div>
         <div><ImageWrapper><CatalogoImage src="/images/banner3.jpg" alt="Madrinhas de Lavanda" /></ImageWrapper></div>
-        <div><ImageWrapper><CatalogoImage src="/images/banner4.jpg" alt="Madrinhas de Tons Verdes" /></ImageWrapper></div>
+        <div><ImageWrapper><CatalogoImage src="/images/banner4.webp" alt="Madrinhas de Tons Verdes" /></ImageWrapper></div>
+        <div><ImageWrapper><CatalogoImage src="/images/banner5.jpg" alt="Madrinhas de Tons Verdes" /></ImageWrapper></div>
+        <div><ImageWrapper><CatalogoImage src="/images/banner6.webp" alt="Madrinhas de Tons Verdes" /></ImageWrapper></div>
+        <div><ImageWrapper><CatalogoImage src="/images/banner7.jpeg" alt="Madrinhas de Tons Verdes" /></ImageWrapper></div>
       </Slider>
     </CatalogoContainer>
   );

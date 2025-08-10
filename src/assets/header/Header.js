@@ -4,7 +4,6 @@ import { FiShoppingBag, FiUser, FiMenu, FiX } from "react-icons/fi";
 import { useState } from "react";
 import logo from "../../images/logo.jpeg";
 
-// Animação de fade + slide para baixo
 const slideDown = keyframes`
   from {
     opacity: 0;
