@@ -1,7 +1,18 @@
 import Slider from 'react-slick';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 const CatalogoContainer = styled.div`
   max-width: 800px;
@@ -33,6 +44,7 @@ const ImageWrapper = styled.div`
   height: 350px;
   border-radius: 16px;
   overflow: hidden;
+  animation: ${fadeIn} 0.6s ease-in-out;
 `;
 
 const CatalogoImage = styled.img`
