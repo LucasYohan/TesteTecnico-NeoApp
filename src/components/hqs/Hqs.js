@@ -4,19 +4,7 @@ import styled from "styled-components";
 import HqCard from "../hqs/HqCard";
 import { FiChevronLeft, FiChevronRight, FiSearch } from "react-icons/fi";
 import { Link } from "react-router-dom";
-
-import spidermanImg from "../../images/spidermanImg.webp";
-
-const mockHqs = [
-  { id: 1, title: "Spider-Man: Life Story", price: 220.9, image: spidermanImg, hero: "Homem-Aranha" },
-  { id: 2, title: "X-Men #1", price: 35.5, image: "/images/xmen1.jpg", hero: "X-Man" },
-  { id: 3, title: "Batman #1", price: 27.9, image: "/images/batman1.jpg", hero: "Batman" },
-  { id: 4, title: "Superman #1", price: 32.0, image: "/images/superman1.jpg", hero: "Superman" },
-  { id: 5, title: "Avengers #1", price: 40.0, image: "/images/avengers1.jpg", hero: "Vingadores" },
-  { id: 6, title: "Flash #1", price: 28.5, image: "/images/flash1.jpg", hero: "Flash" },
-  { id: 7, title: "Iron Man #1", price: 30.0, image: "/images/ironman1.jpg", hero: "Homem-de-Ferro" },
-  { id: 8, title: "Thor #1", price: 29.0, image: "/images/thor1.jpg", hero: "Thor" },
-];
+import { hqs as mockHqs } from "./HqData";
 
 const Container = styled.div`
   max-width: 1000px;
@@ -85,7 +73,7 @@ const Pagination = styled.div`
 `;
 
 export default function Hqs() {
-  const { hero } = useParams(); // vem da rota /HQs/:hero
+  const { hero } = useParams();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const itemsPerPage = 6;

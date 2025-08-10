@@ -2,27 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { FiShoppingCart, FiArrowLeft } from "react-icons/fi";
-
-const mockHqs = [
-  {
-    id: 1,
-    title: "Amazing Spider-Man #1",
-    price: 29.9,
-    releaseDate: "1963-03-01",
-    synopsis:
-      "A primeira edição do icônico Homem-Aranha, onde Peter Parker enfrenta seu destino como herói.",
-    image: "/images/spiderman1.jpg",
-  },
-  {
-    id: 2,
-    title: "X-Men #1",
-    price: 35.5,
-    releaseDate: "1963-09-01",
-    synopsis:
-      "A estreia dos X-Men, a equipe de mutantes criada pelo Professor Xavier para proteger um mundo que os teme.",
-    image: "/images/xmen1.jpg",
-  },
-];
+import { hqs as mockHqs } from "./HqData"
 
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(15px); }

@@ -141,7 +141,7 @@ const categorias = [
       { to: "/HQs/Venom", label: "Venom" },
       { to: "/HQs/Homem-de-Ferro", label: "Homem-de-Ferro" },
       { to: "/HQs/Hulk", label: "Hulk" },
-      { to: "/HQs/X-Man", label: "X-Man" },
+      { to: "/HQs/X-Men", label: "X-Men" },
       { to: "/HQs/Vingadores", label: "Vingadores" },
     ],
   },
