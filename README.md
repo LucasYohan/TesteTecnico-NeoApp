@@ -42,3 +42,9 @@ Este projeto foi desenvolvido como parte de um teste técnico para a **NeoApp**,
 4. **Inicie o projeto**
    ```bash
    npm start
+
+
+**CUPONS**
+
+- COMUM5
+- RARO10
