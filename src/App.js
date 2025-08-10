@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { CartProvider } from './components/shopping_cart/CartContext';
 import Footer from "./assets/footer/Footer";
 import Header from './assets/header/Header';
 import Home from "./components/home/Home";
@@ -10,26 +11,23 @@ import User from './components/user/User';
 
 function App() {
   return (
-    <BrowserRouter className='body'>
-      <Header />
-      <main>
-        <Routes>
-          <Route path="/" element={<Navigate to="/Home" />} />
-
-          <Route path="/Home" element={<Home />} />
-
-          <Route path="/HQs" element={<Hqs />} />
-
-          <Route path="/HQs/:hero" element={<Hqs />} />
-
-          <Route path="/Carrinho" element={<Shopping_cart />} />
-          <Route path="/Conta" element={<User />} />
-
-          <Route path="/hq/:id" element={<HqPage />} />
-        </Routes>
-      </main>
-      <Footer />
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter className='body'>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<Navigate to="/Home" />} />
+            <Route path="/Home" element={<Home />} />
+            <Route path="/HQs" element={<Hqs />} />
+            <Route path="/HQs/:hero" element={<Hqs />} />
+            <Route path="/Carrinho" element={<Shopping_cart />} />
+            <Route path="/Conta" element={<User />} />
+            <Route path="/hq/:id" element={<HqPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

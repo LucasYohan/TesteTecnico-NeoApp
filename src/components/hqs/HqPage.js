@@ -2,11 +2,19 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { FiShoppingCart, FiArrowLeft } from "react-icons/fi";
-import { hqs as mockHqs } from "./HqData"
+import { hqs as mockHqs } from "./HqData";
+import { useCart } from "../shopping_cart/CartContext";
 
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
+`;
+
+const toastAnimation = keyframes`
+  0% { opacity: 0; transform: translateY(20px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(20px); }
 `;
 
 const PageContainer = styled.div`
@@ -18,6 +26,21 @@ const PageContainer = styled.div`
   border-radius: 12px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   animation: ${fadeIn} 0.4s ease-in-out;
+  position: relative;
+`;
+
+const Toast = styled.div`
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f1e7e3;
+  color: #990e04;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  animation: ${toastAnimation} 2s ease forwards;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
 `;
 
 const BackButton = styled.button`
@@ -95,10 +118,11 @@ const CartButton = styled.button`
 export default function HqPage() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const { addToCart } = useCart(); // <-- pega do contexto
   const [hq, setHq] = useState(null);
+  const [toast, setToast] = useState(null);
 
   useEffect(() => {
-    // Aqui futuramente será uma chamada API
     const found = mockHqs.find((item) => item.id === Number(id));
     setHq(found);
   }, [id]);
@@ -112,7 +136,9 @@ export default function HqPage() {
   }
 
   const handleAddToCart = () => {
-    alert(`HQ "${hq.title}" adicionada ao carrinho!`);
+    addToCart(hq); // <-- agora sempre funciona
+    setToast(`"${hq.title}" foi adicionado ao carrinho!`);
+    setTimeout(() => setToast(null), 2000);
   };
 
   return (
@@ -136,6 +162,8 @@ export default function HqPage() {
           </CartButton>
         </Info>
       </HqContent>
+
+      {toast && <Toast>{toast}</Toast>}
     </PageContainer>
   );
 }

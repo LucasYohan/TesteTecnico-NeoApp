@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useState } from "react";
+import { useCart } from "./CartContext";
 
 const CartContainer = styled.div`
   background-color: #990e04;
@@ -86,9 +88,38 @@ const CheckoutButton = styled.button`
   }
 `;
 
-export default function CartForm({ cartItems = [], onRemoveItem, onCheckout }) {
+const SuccessMessage = styled.div`
+  background-color: #28a745;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 0.3s ease-in-out;
 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+`;
+
+export default function CartForm() {
+  const { cartItems, removeFromCart, clearCart } = useCart();
+  const [success, setSuccess] = useState(false);
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
+
+  const handleCheckout = () => {
+    clearCart();
+    setSuccess(true);
+    setTimeout(() => setSuccess(false), 3000);
+  };
 
   return (
     <CartContainer>
@@ -101,14 +132,16 @@ export default function CartForm({ cartItems = [], onRemoveItem, onCheckout }) {
             {cartItems.map((item) => (
               <CartItem key={item.id}>
                 {item.title} - R${item.price.toFixed(2)}
-                <RemoveButton onClick={() => onRemoveItem(item.id)}>✖</RemoveButton>
+                <RemoveButton onClick={() => removeFromCart(item.id)}>✖</RemoveButton>
               </CartItem>
             ))}
           </CartList>
           <Total>Total: R${total.toFixed(2)}</Total>
-          <CheckoutButton onClick={onCheckout}>Finalizar Compra</CheckoutButton>
+          <CheckoutButton onClick={handleCheckout}>Finalizar Compra</CheckoutButton>
         </>
       )}
+
+      {success && <SuccessMessage>✅ Compra realizada com sucesso!</SuccessMessage>}
     </CartContainer>
   );
 }

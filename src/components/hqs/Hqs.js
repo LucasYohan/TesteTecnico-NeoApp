@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import HqCard from "../hqs/HqCard";
 import { FiChevronLeft, FiChevronRight, FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import { hqs as mockHqs } from "./HqData";
+import { useCart } from "../shopping_cart/CartContext";
 
 const Container = styled.div`
   max-width: 1000px;
@@ -72,10 +72,33 @@ const Pagination = styled.div`
   }
 `;
 
+
+const Toast = styled.div`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+  animation: fadeInOut 2s forwards;
+
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(20px); }
+  }
+`;
+
 export default function Hqs() {
   const { hero } = useParams();
+  const { addToCart } = useCart();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
+  const [toast, setToast] = useState(null);
   const itemsPerPage = 6;
 
   const filteredHqs = useMemo(() => {
@@ -89,6 +112,16 @@ export default function Hqs() {
   const totalPages = Math.ceil(filteredHqs.length / itemsPerPage);
   const startIndex = (page - 1) * itemsPerPage;
   const currentItems = filteredHqs.slice(startIndex, startIndex + itemsPerPage);
+
+  function handleAddToCart(hq) {
+    addToCart(hq);
+    setToast(`"${hq.title}" foi adicionado ao carrinho!`);
+
+    setTimeout(() => {
+      setToast(null);
+    }, 2000);
+  }
+
 
   return (
     <Container>
@@ -107,19 +140,16 @@ export default function Hqs() {
 
       <Grid>
         {currentItems.map((hq) => (
-          <Link
-            to={`/hq/${hq.id}`}
+          <HqCard
             key={hq.id}
-            style={{ textDecoration: "none" }}
-          >
-            <HqCard
-              image={hq.image}
-              title={hq.title}
-              price={hq.price}
-              hero={hq.hero}
-              onAddToCart={() => alert(`Adicionado: ${hq.title}`)}
-            />
-          </Link>
+            id={hq.id}
+            image={hq.image}
+            title={hq.title}
+            price={hq.price}
+            hero={hq.hero}
+            onAddToCart={() => handleAddToCart(hq)}
+            linkTo={`/hq/${hq.id}`}
+          />
         ))}
       </Grid>
 
@@ -134,6 +164,8 @@ export default function Hqs() {
           </button>
         </Pagination>
       )}
+
+      {toast && <Toast>{toast}</Toast>}
     </Container>
   );
 }

@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
-import { image } from "framer-motion/client";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const fadeIn = keyframes`
   from {
@@ -78,9 +79,12 @@ const CartButton = styled.button`
   }
 `;
 
-export default function HqCard({ id, image, title, price, hero, onAddToCart, onClick }) {
+export default function HqCard({ id, image, title, price, hero, onAddToCart, linkTo }) {
+  const [added, setAdded] = useState(false);
+  const navigate = useNavigate();
+
   return (
-    <Card onClick={onClick}>
+    <Card onClick={() => navigate(linkTo)}>
       <Cover src={image} alt={title} />
       <Info>
         <Title>{title}</Title>
