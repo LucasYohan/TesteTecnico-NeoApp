@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import HqCard from "../hqs/HqCard";
 import { FiChevronLeft, FiChevronRight, FiSearch } from "react-icons/fi";
-import { hqs as mockHqs } from "./HqData";
+import { hqs as mockHqs } from "../../utils/HqData";
 import { useCart } from "../shopping_cart/CartContext";
+import { markRareHqs } from "../../utils/untils";
 
 const Container = styled.div`
   max-width: 1000px;
@@ -101,13 +102,18 @@ export default function Hqs() {
   const [toast, setToast] = useState(null);
   const itemsPerPage = 6;
 
+  // Aqui já sorteia raros
+  const hqsComRaros = useMemo(() => {
+    return markRareHqs(mockHqs);
+  }, []);
+
   const filteredHqs = useMemo(() => {
-    return mockHqs.filter((hq) => {
+    return hqsComRaros.filter((hq) => {
       const matchesSearch = hq.title.toLowerCase().includes(search.toLowerCase());
       const matchesHero = hero ? hq.hero.toLowerCase() === hero.toLowerCase() : true;
       return matchesSearch && matchesHero;
     });
-  }, [search, hero]);
+  }, [search, hero, hqsComRaros]);
 
   const totalPages = Math.ceil(filteredHqs.length / itemsPerPage);
   const startIndex = (page - 1) * itemsPerPage;
@@ -116,12 +122,8 @@ export default function Hqs() {
   function handleAddToCart(hq) {
     addToCart(hq);
     setToast(`"${hq.title}" foi adicionado ao carrinho!`);
-
-    setTimeout(() => {
-      setToast(null);
-    }, 2000);
+    setTimeout(() => setToast(null), 2000);
   }
-
 
   return (
     <Container>
@@ -147,6 +149,7 @@ export default function Hqs() {
             title={hq.title}
             price={hq.price}
             hero={hq.hero}
+            rare={hq.rare} // passa info para o card
             onAddToCart={() => handleAddToCart(hq)}
             linkTo={`/hq/${hq.id}`}
           />

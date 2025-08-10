@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { FiShoppingCart, FiArrowLeft } from "react-icons/fi";
-import { hqs as mockHqs } from "./HqData";
+import { hqs as mockHqs } from "../../utils/HqData";
 import { useCart } from "../shopping_cart/CartContext";
 
 const fadeIn = keyframes`
@@ -118,7 +118,7 @@ const CartButton = styled.button`
 export default function HqPage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { addToCart } = useCart(); // <-- pega do contexto
+  const { addToCart } = useCart();
   const [hq, setHq] = useState(null);
   const [toast, setToast] = useState(null);
 
@@ -136,7 +136,7 @@ export default function HqPage() {
   }
 
   const handleAddToCart = () => {
-    addToCart(hq); // <-- agora sempre funciona
+    addToCart(hq);
     setToast(`"${hq.title}" foi adicionado ao carrinho!`);
     setTimeout(() => setToast(null), 2000);
   };

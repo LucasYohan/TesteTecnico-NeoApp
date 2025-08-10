@@ -1,6 +1,5 @@
 import styled, { keyframes } from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const fadeIn = keyframes`
@@ -79,15 +78,17 @@ const CartButton = styled.button`
   }
 `;
 
-export default function HqCard({ id, image, title, price, hero, onAddToCart, linkTo }) {
-  const [added, setAdded] = useState(false);
+export default function HqCard({ id, image, title, price, rare, onAddToCart, linkTo }) {
   const navigate = useNavigate();
 
   return (
     <Card onClick={() => navigate(linkTo)}>
       <Cover src={image} alt={title} />
       <Info>
-        <Title>{title}</Title>
+        <Title>
+          {title}{" "}
+          {rare && <span style={{ color: "gold", fontSize: "0.85em" }}>★ Raro</span>}
+        </Title>
         <Price>R$ {price.toFixed(2)}</Price>
         <CartButton
           onClick={(e) => {

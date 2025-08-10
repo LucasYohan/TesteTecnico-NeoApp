@@ -1,25 +1,25 @@
-import spidermanImg1 from "../../images/spidermanImg.webp";
-import spidermanImg2 from "../../images/spidermanImg2.webp";
-import spidermanImg3 from "../../images/spidermanImg3.jpg"
-import spidermanImg4 from "../../images/spidermanImg4.jpg"
-import spidermanImg5 from "../../images/spidermanImg5.jpg"
-import venomImg from "../../images/venomImg.jpeg"
-import venomImg2 from "../../images/venomImg2.jpg"
-import venomImg3 from "../../images/venomImg3.jpeg"
-import ironmanImg from "../../images/ironmanImg.jpg"
-import ironmanImg2 from "../../images/ironmanImg2.jpg"
-import hulkImg from "../../images/hulkImg.jpg"
-import hulkImg2 from "../../images/hulkImg2.jpg"
-import hulkImg3 from "../../images/hulkImg3.jpg"
-import xmenImg from "../../images/xmenImg.jpg"
-import xmenImg2 from "../../images/xmenImg2.jpg"
-import xmenImg3 from "../../images/xmenImg3.jpeg"
-import avangersImg from "../../images/avangersImg.jpeg"
-import avangersImg2 from "../../images/avangersImg2.jpg"
-import avangersImg3 from "../../images/avangersImg3.jpg"
-import avangersImg4 from "../../images/avangersImg4.jpg"
-import avangersImg5 from "../../images/avangderImg5.jpeg"
-import avangersImg6 from "../../images/avangersImg6.jpeg"
+import spidermanImg1 from "../images/spidermanImg.webp";
+import spidermanImg2 from "../images/spidermanImg2.webp";
+import spidermanImg3 from "../images/spidermanImg3.jpg"
+import spidermanImg4 from "../images/spidermanImg4.jpg"
+import spidermanImg5 from "../images/spidermanImg5.jpg"
+import venomImg from "../images/venomImg.jpeg"
+import venomImg2 from "../images/venomImg2.jpg"
+import venomImg3 from "../images/venomImg3.jpeg"
+import ironmanImg from "../images/ironmanImg.jpg"
+import ironmanImg2 from "../images/ironmanImg2.jpg"
+import hulkImg from "../images/hulkImg.jpg"
+import hulkImg2 from "../images/hulkImg2.jpg"
+import hulkImg3 from "../images/hulkImg3.jpg"
+import xmenImg from "../images/xmenImg.jpg"
+import xmenImg2 from "../images/xmenImg2.jpg"
+import xmenImg3 from "../images/xmenImg3.jpeg"
+import avangersImg from "../images/avangersImg.jpeg"
+import avangersImg2 from "../images/avangersImg2.jpg"
+import avangersImg3 from "../images/avangersImg3.jpg"
+import avangersImg4 from "../images/avangersImg4.jpg"
+import avangersImg5 from "../images/avangderImg5.jpeg"
+import avangersImg6 from "../images/avangersImg6.jpeg"
 
 export const hqs = [
     { id: 1, title: "Amazing Fantasy #15", price: 49.90, image: spidermanImg3, hero: "Homem-Aranha", releaseDate: "1962-08-01", synopsis: "A estreia do Homem-Aranha no universo Marvel." },
@@ -45,4 +45,3 @@ export const hqs = [
     { id: 21, title: "Spider-Man: Life Story", price: 220.9, image: spidermanImg1, hero: "Homem-Aranha", releaseDate: "2019-04-01", synopsis: "História completa do Homem-Aranha ao longo das décadas." },
     { id: 22, title: "Espetacular Homem-Aranha - 3ª Série #01", price: 70.9, image: spidermanImg2, hero: "Homem-Aranha", releaseDate: "2021-05-01", synopsis: "O início da terceira série do Espetacular Homem-Aranha." },
 ];
-
