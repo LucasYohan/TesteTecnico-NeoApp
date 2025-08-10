@@ -102,7 +102,6 @@ export default function Hqs() {
   const [toast, setToast] = useState(null);
   const itemsPerPage = 6;
 
-  // Aqui já sorteia raros
   const hqsComRaros = useMemo(() => {
     return markRareHqs(mockHqs);
   }, []);
@@ -149,7 +148,7 @@ export default function Hqs() {
             title={hq.title}
             price={hq.price}
             hero={hq.hero}
-            rare={hq.rare} // passa info para o card
+            rare={hq.rare}
             onAddToCart={() => handleAddToCart(hq)}
             linkTo={`/hq/${hq.id}`}
           />
