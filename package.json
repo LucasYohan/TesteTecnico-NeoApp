@@ -1,7 +1,7 @@
 {
   "name": "neoapp",
   "version": "0.1.0",
-  "homepage": "https://LucasYohan.github.io/TesteTecnico-NeoApp",
+  "homepage": "https://lucasyohan.github.io/TesteTecnico-NeoApp",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
