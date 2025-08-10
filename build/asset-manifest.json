@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TesteTecnico-NeoApp/static/css/main.2b0a7090.css",
-    "main.js": "/TesteTecnico-NeoApp/static/js/main.2c72c370.js",
+    "main.js": "/TesteTecnico-NeoApp/static/js/main.d5b00aca.js",
     "static/media/venomImg2.jpg": "/TesteTecnico-NeoApp/static/media/venomImg2.616c4db42dbe2a34583e.jpg",
     "static/media/background.jpg": "/TesteTecnico-NeoApp/static/media/background.d135be28f66750a0716c.jpg",
     "static/media/avangersImg4.jpg": "/TesteTecnico-NeoApp/static/media/avangersImg4.b15759c93ae0b3eb73ac.jpg",
@@ -18,23 +18,29 @@
     "static/media/ironmanImg.jpg": "/TesteTecnico-NeoApp/static/media/ironmanImg.3c99c23640c43de9ee4d.jpg",
     "static/media/ironmanImg2.jpg": "/TesteTecnico-NeoApp/static/media/ironmanImg2.d54cf1d140bcc5e677e3.jpg",
     "static/media/hulkImg3.jpg": "/TesteTecnico-NeoApp/static/media/hulkImg3.4b14965babf017ca5800.jpg",
+    "static/media/banner6.webp": "/TesteTecnico-NeoApp/static/media/banner6.23dd82283b01e1127c27.webp",
+    "static/media/banner5.jpg": "/TesteTecnico-NeoApp/static/media/banner5.42d5c73f7474a431b689.jpg",
     "static/media/avangersImg.jpeg": "/TesteTecnico-NeoApp/static/media/avangersImg.382c7ba25b6c470b4b71.jpeg",
     "static/media/venomImg3.jpeg": "/TesteTecnico-NeoApp/static/media/venomImg3.5fb5e8df11e5ea0d5e73.jpeg",
+    "static/media/banner2.jpg": "/TesteTecnico-NeoApp/static/media/banner2.59bcbf093db4f4a5dc90.jpg",
     "static/media/xmenImg3.jpeg": "/TesteTecnico-NeoApp/static/media/xmenImg3.92f2e0d93a1338a13702.jpeg",
     "static/media/venomImg.jpeg": "/TesteTecnico-NeoApp/static/media/venomImg.af2ed6531b968b2549f5.jpeg",
     "static/media/spidermanImg.webp": "/TesteTecnico-NeoApp/static/media/spidermanImg.3fd156a35f035cd0f6e2.webp",
     "static/media/avangderImg5.jpeg": "/TesteTecnico-NeoApp/static/media/avangderImg5.4e694d9fd8551ea159cb.jpeg",
+    "static/media/banner7.jpeg": "/TesteTecnico-NeoApp/static/media/banner7.4d2fe959a7b4f4f97cf1.jpeg",
     "static/media/avangersImg6.jpeg": "/TesteTecnico-NeoApp/static/media/avangersImg6.ab76a344ad46eab77c72.jpeg",
+    "static/media/banner3.jpg": "/TesteTecnico-NeoApp/static/media/banner3.87d29fffd3d1ae65057d.jpg",
     "static/media/slick.svg": "/TesteTecnico-NeoApp/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/TesteTecnico-NeoApp/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/TesteTecnico-NeoApp/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/banner4.webp": "/TesteTecnico-NeoApp/static/media/banner4.3cf1121f504176c0d3b6.webp",
     "static/media/slick.woff": "/TesteTecnico-NeoApp/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/TesteTecnico-NeoApp/index.html",
     "main.2b0a7090.css.map": "/TesteTecnico-NeoApp/static/css/main.2b0a7090.css.map",
-    "main.2c72c370.js.map": "/TesteTecnico-NeoApp/static/js/main.2c72c370.js.map"
+    "main.d5b00aca.js.map": "/TesteTecnico-NeoApp/static/js/main.d5b00aca.js.map"
   },
   "entrypoints": [
     "static/css/main.2b0a7090.css",
-    "static/js/main.2c72c370.js"
+    "static/js/main.d5b00aca.js"
   ]
 }
