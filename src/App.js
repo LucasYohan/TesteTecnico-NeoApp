@@ -12,7 +12,7 @@ import User from './components/user/User';
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter className='body'>
+      <BrowserRouter basename="/TesteTecnico-NeoApp" className='body'>
         <Header />
         <main>
           <Routes>
