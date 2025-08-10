@@ -43,8 +43,9 @@ Este projeto foi desenvolvido como parte de um teste técnico para a **NeoApp**,
    ```bash
    npm start
 
+---
 
-**CUPONS**
+## 💵 CUPONS
 
 - COMUM5
 - RARO10
