@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TesteTecnico-NeoApp/static/css/main.2b0a7090.css",
-    "main.js": "/TesteTecnico-NeoApp/static/js/main.37a0add2.js",
+    "main.js": "/TesteTecnico-NeoApp/static/js/main.fe34f1f2.js",
     "static/media/venomImg2.jpg": "/TesteTecnico-NeoApp/static/media/venomImg2.616c4db42dbe2a34583e.jpg",
     "static/media/background.jpg": "/TesteTecnico-NeoApp/static/media/background.d135be28f66750a0716c.jpg",
     "static/media/avangersImg4.jpg": "/TesteTecnico-NeoApp/static/media/avangersImg4.b15759c93ae0b3eb73ac.jpg",
@@ -31,10 +31,10 @@
     "static/media/slick.woff": "/TesteTecnico-NeoApp/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/TesteTecnico-NeoApp/index.html",
     "main.2b0a7090.css.map": "/TesteTecnico-NeoApp/static/css/main.2b0a7090.css.map",
-    "main.37a0add2.js.map": "/TesteTecnico-NeoApp/static/js/main.37a0add2.js.map"
+    "main.fe34f1f2.js.map": "/TesteTecnico-NeoApp/static/js/main.fe34f1f2.js.map"
   },
   "entrypoints": [
     "static/css/main.2b0a7090.css",
-    "static/js/main.37a0add2.js"
+    "static/js/main.fe34f1f2.js"
   ]
 }
