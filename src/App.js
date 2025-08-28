@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { CartProvider } from './components/shopping_cart/CartContext';
 import Footer from "./assets/footer/Footer";
 import Header from './assets/header/Header';
@@ -12,7 +12,7 @@ import User from './components/user/User';
 function App() {
   return (
     <CartProvider>
-      <BrowserRouter basename="/TesteTecnico-NeoApp" className='body'>
+      <HashRouter basename="/" className='body'>
         <Header />
         <main>
           <Routes>
@@ -26,7 +26,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </CartProvider>
   );
 }
